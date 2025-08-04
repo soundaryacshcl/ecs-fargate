@@ -14,7 +14,7 @@ provider "aws" {
   default_tags {
     tags = {
       Environment = var.environment
-      Project     = "bayer-healthcare-app"
+      Project     = "healthcare-app"
       ManagedBy   = "terraform"
     }
   }

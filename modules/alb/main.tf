@@ -36,7 +36,7 @@ resource "aws_lb_target_group" "patient_service" {
 
   tags = {
     Name        = "${var.project_name}-${var.environment}-patient-tg"
-    Service     = "bayer-patient-service"
+    Service     = "patient-service"
     Environment = var.environment
   }
 }
@@ -63,7 +63,7 @@ resource "aws_lb_target_group" "appointment_service" {
 
   tags = {
     Name        = "${var.project_name}-${var.environment}-appointment-tg"
-    Service     = "bayer-appointment-service"
+    Service     = "appointment-service"
     Environment = var.environment
   }
 }
@@ -79,7 +79,7 @@ resource "aws_lb_listener" "main" {
 
     fixed_response {
       content_type = "text/plain"
-      message_body = "Bayer Healthcare Application - Try /patients or /appointments"
+      message_body = "Healthcare Application - Try /patients or /appointments"
       status_code  = "404"
     }
   }
@@ -108,7 +108,7 @@ resource "aws_lb_listener_rule" "patient_service" {
 
   tags = {
     Name        = "${var.project_name}-${var.environment}-patient-rule"
-    Service     = "bayer-patient-service"
+    Service     = "patient-service"
     Environment = var.environment
   }
 }
@@ -131,7 +131,7 @@ resource "aws_lb_listener_rule" "appointment_service" {
 
   tags = {
     Name        = "${var.project_name}-${var.environment}-appointment-rule"
-    Service     = "bayer-appointment-service"
+    Service     = "appointment-service"
     Environment = var.environment
   }
 }
