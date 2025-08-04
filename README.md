@@ -2,7 +2,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.12.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.11.4 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
 
 ## Providers
@@ -14,7 +14,6 @@ No providers.
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_alb"></a> [alb](#module\_alb) | ./modules/alb | n/a |
-| <a name="module_cloudwatch"></a> [cloudwatch](#module\_cloudwatch) | ./modules/cloudwatch | n/a |
 | <a name="module_ecr"></a> [ecr](#module\_ecr) | ./modules/ecr | n/a |
 | <a name="module_ecs"></a> [ecs](#module\_ecs) | ./modules/ecs | n/a |
 | <a name="module_iam"></a> [iam](#module\_iam) | ./modules/iam | n/a |
@@ -35,7 +34,7 @@ No resources.
 | <a name="input_container_memory"></a> [container\_memory](#input\_container\_memory) | Memory for containers | `number` | `512` | no |
 | <a name="input_desired_capacity"></a> [desired\_capacity](#input\_desired\_capacity) | Desired number of instances | `number` | `1` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment name | `string` | `"dev"` | no |
-| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name | `string` | `"healthcare-app"` | no |
+| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name | `string` | `"bayer-healthcare-app"` | no |
 | <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | CIDR block for VPC | `string` | `"10.0.0.0/16"` | no |
 
 ## Outputs
@@ -44,7 +43,6 @@ No resources.
 |------|-------------|
 | <a name="output_alb_dns_name"></a> [alb\_dns\_name](#output\_alb\_dns\_name) | DNS name of the load balancer |
 | <a name="output_alb_zone_id"></a> [alb\_zone\_id](#output\_alb\_zone\_id) | Zone ID of the load balancer |
-| <a name="output_cloudwatch_log_group_names"></a> [cloudwatch\_log\_group\_names](#output\_cloudwatch\_log\_group\_names) | Names of CloudWatch log groups |
 | <a name="output_ecr_appointment_repository_url"></a> [ecr\_appointment\_repository\_url](#output\_ecr\_appointment\_repository\_url) | URL of the appointment service ECR repository |
 | <a name="output_ecr_patient_repository_url"></a> [ecr\_patient\_repository\_url](#output\_ecr\_patient\_repository\_url) | URL of the patient service ECR repository |
 | <a name="output_ecs_cluster_name"></a> [ecs\_cluster\_name](#output\_ecs\_cluster\_name) | Name of the ECS cluster |
